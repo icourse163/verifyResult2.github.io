@@ -1,0 +1,202 @@
+/* 基本重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面容器 */
+.container {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding: 20px;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+/* 页面头部 */
+header {
+    display: flex;
+    flex-wrap: wrap; /* 允许换行 */
+    justify-content: center; /* 居中 */
+    align-items: center;
+    background-color: rgb(138, 185, 0);
+    color: white;
+    padding: 20px;
+}
+
+header .logo img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+header .info {
+    text-align: center; /* 使文本居中 */
+}
+
+header .info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+header .info p {
+    font-size: 16px;
+}
+
+/* .profile 部分 */
+.profile {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;
+    position: relative;
+}
+
+/* 头像部分 */
+.uni {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+
+/* 个人信息区域 */
+.profile .student-info {
+    display: flex;
+    justify-content: flex-start; /* 使子元素在一行内排列 */
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    flex-wrap: wrap; /* 允许换行 */
+}
+
+.profile .student-info .student-photo {
+    width: 120px;
+    height: 160px;
+    border-radius: 8px;
+    margin-right: 20px; /* 使头像和基本信息有间距 */
+}
+
+.profile .student-info .details p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* 课程描述区域 */
+.course-description {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-description h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.course-description p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* 页脚 */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* 响应式设计：适应屏幕宽度小于768px */
+@media (max-width: 768px) {
+    /* 页面容器 */
+    .container {
+        padding: 10px;
+    }
+
+    /* 头部内容 */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    /* 个人信息区域 */
+    .profile .student-info {
+        flex-direction: row; /* 强制横向排列 */
+        text-align: center;
+    }
+
+    .profile .student-info .student-photo {
+        width: 100px;
+        height: 130px;
+    }
+
+    .profile .student-info .details p {
+        font-size: 14px;
+    }
+
+    /* 课程描述区域 */
+    .course-description h2 {
+        font-size: 18px;
+    }
+
+    .course-description p {
+        font-size: 14px;
+    }
+
+    /* 页脚 */
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}
+
+/* 响应式设计：适应小屏手机 */
+@media (max-width: 480px) {
+    header .info h1 {
+        font-size: 20px;
+    }
+
+    header .info p {
+        font-size: 14px;
+    }
+
+    .profile .student-info .student-photo {
+        width: 90px;
+        height: 120px;
+    }
+
+    .profile .student-info .details p {
+        font-size: 12px;
+    }
+
+    .course-description h2 {
+        font-size: 16px;
+    }
+
+    .course-description p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 10px;
+    }
+}
